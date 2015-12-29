@@ -1,0 +1,14 @@
+custom_book:
+    resource: "@CustomBookBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#event:
+#    resource: "@EventBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+    
+User_controller:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+#fos_user:
+#    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

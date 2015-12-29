@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Book</h1>
+    <div class="table-responsive"> 
+        <table class="table table-bordered table-striped"> 
+           <tbody> 
+                <tr> <th scope="row" class="text-nowrap">ID</th> 
+                    <td>{{ book.id }}</td> 
+                </tr> 
+                <tr> <th scope="row" class="text-nowrap">Name</th> 
+                    <td>{{ book.name }}</td> 
+                </tr> 
+                <tr> <th scope="row" class="text-nowrap">Author</th> 
+                    <td>{{ book.author }}</td> 
+                </tr> 
+                <tr> <th scope="row" class="text-nowrap">Language</th> 
+                    <td>{{ book.language }}</td> 
+                </tr> 
+                <tr> <th scope="row" class="text-nowrap">Publisher</th> 
+                    <td>{{ book.publisher }}</td> 
+                </tr> 
+                <tr> <th scope="row" class="text-nowrap">Summary</th> 
+                    <td>{{ book.summary }}</td> 
+                </tr> 
+            </tbody> 
+        </table> 
+    </div>
+     
+    <div>
+            {%if is_granted('ROLE_ADMIN')%}
+            &nbsp;<a href="{{ path('book_edit', { 'id': book.id }) }}">Edit</a>
+            <br/>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+             {{ form_end(delete_form) }} <br/>
+             {% endif %} 
+             <a href="{{ path('book_index') }}">Back to the list</a>
+     </div>   
+        
+     {% endblock %}

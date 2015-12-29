@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Book edit</h1>
+<div class="form-group">
+    {{ form_start(edit_form) }}
+    {{form_widget(edit_form.name, {'attr': {'class':'form-control','placeholder': 'Name','maxlength':'250'}} ) }}<br>
+        {{form_widget(edit_form.author, {'attr': {'class':'form-control','placeholder': 'Author','maxlength':'200'}} ) }}<br>
+        {{form_widget(edit_form.language, {'attr': {'class':'form-control','placeholder': 'Language','maxlength':'100'}} ) }}<br>
+        {{form_widget(edit_form.publisher, {'attr': {'class':'form-control','placeholder': 'Publisher','maxlength':'100'}} ) }}<br>
+        {{form_widget(edit_form.summary, {'attr': {'class':'form-control','placeholder': 'Summary'}} ) }}<br>
+        {{form_widget(edit_form.category, {'attr': {'class':'form-control','placeholder': 'Summary'}} ) }}<br>
+        <input type="submit" value="Edit" />
+       &nbsp;<a href="{{ path('book_index') }}">Back to the list</a>    
+      
+    {{ form_end(edit_form) }}
+    {%if is_granted('ROLE_ADMIN')%}
+     &nbsp; {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+      {% endif%}      
+    </div>          
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Create a Book</h1>
+
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{form_widget(form.name, {'attr': {'class':'form-control','placeholder': 'Name','maxlength':'250'}} ) }}<br>
+        {{form_widget(form.author, {'attr': {'class':'form-control','placeholder': 'Author','maxlength':'200'}} ) }}<br>
+        {{form_widget(form.language, {'attr': {'class':'form-control','placeholder': 'Language','maxlength':'100'}} ) }}<br>
+        {{form_widget(form.publisher, {'attr': {'class':'form-control','placeholder': 'Publisher','maxlength':'100'}} ) }}<br>
+        {{form_widget(form.summary, {'attr': {'class':'form-control','placeholder': 'Summary'}} ) }}<br>
+        {{form_widget(form.category, {'attr': {'class':'form-control','placeholder': 'Category'}} ) }}<br>
+      
+        <input type="submit" value="Create" />
+    &nbsp;<a href="{{ path('book_index') }}">Back to the list</a>
+    </div>
+    {{ form_end(form) }}
+
+   
+    
+{% endblock %}

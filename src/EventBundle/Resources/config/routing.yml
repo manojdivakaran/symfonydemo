@@ -1,0 +1,9 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: EventBundle:Default:index }
+event_test_default:
+    path:    /event/test
+    defaults: { _controller: EventBundle:Event:test, param1:"Testdefault" }
+event_test1:
+    path:    /event/test/{param1}
+    defaults: { _controller: EventBundle:Event:test }
