@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
-
+{% block javascripthead %}
+ <script src="{{ asset('bundles/tinymce/tinymce.min.js') }}"></script>   
+<script type="text/javascript">
+    tinymce.init({
+    selector: '#book_summary'
+  });
+  </script>
+{% endblock %}
 {% block body %}
     <h1>Book edit</h1>
 <div class="form-group">

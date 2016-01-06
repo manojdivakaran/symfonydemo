@@ -28,7 +28,9 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "twbs/bootstrap":"^3.3",
         "components/jquery": "^2.1",
-        "friendsofsymfony/user-bundle": "~2.0@dev"
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "egeloen/ckeditor-bundle": "^4.0",
+        "tinymce/tinymce": ">=4"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

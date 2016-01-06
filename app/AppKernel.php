@@ -18,7 +18,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new EventBundle\EventBundle(),
             new CustomBookBundle\CustomBookBundle(),
-            new UserBundle\UserBundle()
+            new UserBundle\UserBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle()
             #new FOS\UserBundle\FOSUserBundle(),
         );
 
